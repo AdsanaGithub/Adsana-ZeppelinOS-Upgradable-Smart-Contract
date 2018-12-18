@@ -1,0 +1,8 @@
+{
+  "zosversion": "2",
+  "name": "SANAUTH",
+  "version": "1.0.0",
+  "contracts": {
+    "Sanauth_New": "Sanauth_New"
+  }
+}

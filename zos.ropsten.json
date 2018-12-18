@@ -1,0 +1,89 @@
+{
+  "contracts": {
+    "Sanauth_New": {
+      "address": "0xa0d177488d2e1740faf8536d56085d1e41b94c7e",
+      "constructorCode": "608060405234801561001057600080fd5b50611622806100206000396000f300",
+      "bodyBytecodeHash": "b202678cad2ca57c255c14f5d63c1d19370846b20c8cb96b1a8e56e3184658a2",
+      "localBytecodeHash": "93d3f89cd3539e0e443737751a33bac7c60fe862b8ac276c6660b12ee5ccf5ad",
+      "deployedBytecodeHash": "93d3f89cd3539e0e443737751a33bac7c60fe862b8ac276c6660b12ee5ccf5ad",
+      "types": {
+        "t_uint256": {
+          "id": "t_uint256",
+          "kind": "elementary",
+          "label": "uint256"
+        },
+        "t_mapping<t_uint256>": {
+          "id": "t_mapping<t_uint256>",
+          "valueType": "t_uint256",
+          "label": "mapping(key => uint256)",
+          "kind": "mapping"
+        },
+        "t_uint8": {
+          "id": "t_uint8",
+          "kind": "elementary",
+          "label": "uint8"
+        }
+      },
+      "storage": [
+        {
+          "contract": "BasicToken",
+          "path": "..\\..\\..\\..\\C\\Users\\User\\Videos\\zeppelin\\node_modules\\openzeppelin-solidity\\contracts\\token\\ERC20\\BasicToken.sol",
+          "label": "balances",
+          "astId": 1344,
+          "type": "t_mapping<t_uint256>",
+          "src": "249:45:7"
+        },
+        {
+          "contract": "BasicToken",
+          "path": "..\\..\\..\\..\\C\\Users\\User\\Videos\\zeppelin\\node_modules\\openzeppelin-solidity\\contracts\\token\\ERC20\\BasicToken.sol",
+          "label": "totalSupply_",
+          "astId": 1346,
+          "type": "t_uint256",
+          "src": "299:29:7"
+        },
+        {
+          "contract": "StandardToken",
+          "path": "..\\..\\..\\..\\C\\Users\\User\\Videos\\zeppelin\\node_modules\\openzeppelin-solidity\\contracts\\token\\ERC20\\StandardToken.sol",
+          "label": "allowed",
+          "astId": 1516,
+          "type": "t_mapping<t_uint256>",
+          "src": "383:66:10"
+        },
+        {
+          "contract": "Sanauth_New",
+          "path": "..\\..\\..\\..\\C\\Users\\User\\Videos\\zeppelin\\contracts\\Sanauth_New.sol",
+          "label": "c",
+          "astId": 1158,
+          "type": "t_uint8",
+          "src": "614:14:5"
+        }
+      ],
+      "warnings": {
+        "hasConstructor": false,
+        "hasSelfDestruct": false,
+        "hasDelegateCall": false,
+        "hasInitialValuesInDeclarations": false,
+        "uninitializedBaseContracts": [],
+        "storageUncheckedVars": [],
+        "storageDiff": [
+          {
+            "action": "append",
+            "updated": {
+              "index": 3,
+              "contract": "Sanauth_New",
+              "path": "..\\..\\..\\..\\C\\Users\\User\\Videos\\zeppelin\\contracts\\Sanauth_New.sol",
+              "label": "c",
+              "astId": 1158,
+              "type": "t_uint8",
+              "src": "614:14:5"
+            }
+          }
+        ]
+      }
+    }
+  },
+  "solidityLibs": {},
+  "proxies": {},
+  "zosversion": "2",
+  "version": "1.0.0"
+}

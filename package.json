@@ -1,0 +1,21 @@
+{
+  "name": "sanauth-zeppelin",
+  "version": "0.0.1",
+  "description": "Onboarding and Upgrading ERC20 token contract",
+  "main": "truffle-config.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Meegada-Mahesh"
+  ],
+  "author": "Meegada Mahesh",
+  "license": "ISC",
+  "dependencies": {
+    "openzeppelin-eth": "^2.0.0",
+    "openzeppelin-solidity": "^1.12.0",
+    "truffle-hdwallet-provider": "0.0.6",
+    "web3": "^1.0.0-beta.37",
+    "zos-lib": "^2.0.1"
+  }
+}
