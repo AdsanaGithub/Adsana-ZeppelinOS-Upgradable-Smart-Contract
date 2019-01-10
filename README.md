@@ -1,4 +1,14 @@
-# Zeppelin-Onboarding
+# Zeppelin
+
+OpenZeppelin launched their project two years ago, just before DEVCON2 in Shanghai, as a very ambitious and (what at the time seemed crazy) initiative: smart contract development in 2016 was very chaotic and fragmented, and major hacks happened every month. We managed to get initial community support because we were new to the Ethereum space, but brought in some successes from the early Bitcoin days on our shoulders.
+
+Our flagship and most-loved project, which made us rename the company from Smart Contract Solutions to Zeppelin Solutions — and later Zeppelin, because everyone called us “the Zeppelin guys.”
+
+The vision of this project is to be a community-built standard of secure smart contracts.
+
+We 
+
+
 
 
 Before change in zeppelin os (With out change onboarded initially)
