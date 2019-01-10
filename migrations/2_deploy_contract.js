@@ -3,7 +3,7 @@
 // var Airdrop = artifacts.require("./Airdrop.sol");
 // var BaseToken = artifacts.require("./BaseToken.sol");
 // var SafeMath = artifacts.require("./SafeMath.sol");
-var Sanauth_New = artifacts.require("./Sanauth_New.sol");
+var Sanaut_New = artifacts.require("./Sanaut_New.sol");
 
 module.exports = function(deployer){
     // deployer.deploy(Airdrop,Owner);
