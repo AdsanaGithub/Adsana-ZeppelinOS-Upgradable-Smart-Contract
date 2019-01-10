@@ -29,9 +29,13 @@ Ropsten Link -->  https://ropsten.etherscan.io/tx/0x0f52a581fb0e542a4338ab20100b
 
 # Open Zeppelin / ZeppelinOS.  The defacto leaders in open and secure smart contract code.
 
-Zeppelin Research started performing security audits as a way to push the industry to grow and mature. and to grow their network of allies in the space. Many big names such as the Ethereum Foundation, Augur, DFINITY and numerous others rely on their expertise and secure smart contract codebase. Zeppelin Research has helped key projects achieve their goals without being hacked, and freely share their knowledge to the world for reuse and adaptation.
+Zeppelin Research started performing security audits as a way to push the industry to grow and mature. and to grow their network of allies in the space. 
 
-ZeppelinOS is an Open Zeppelin platform designed specifically to develop, deploy and operate any smart contract project securely as well as allowing for seamless upgrades.  The need for and idea of ZeppelinOS originated from their audit and then OpenZeppelin work. By working working closely with more than 50 projects, they discovered that the fear of being hacked or of contracts being buggy was the main reason they were paying them for audits and using OpenZeppelin’s community-vetted contracts.
+Many big names such as the Ethereum Foundation, Augur, DFINITY and numerous others rely on their expertise and secure smart contract codebase. Zeppelin Research has helped key projects achieve their goals without being hacked, and freely share their knowledge to the world for reuse and adaptation.
+
+ZeppelinOS is an Open Zeppelin platform designed specifically to develop, deploy and operate any smart contract project securely as well as allowing for seamless upgrades.  
+
+The need for and idea of ZeppelinOS originated from their audit and then OpenZeppelin work. By working working closely with more than 50 projects, they discovered that the fear of being hacked or of contracts being buggy was the main reason they were paying them for audits and using OpenZeppelin’s community-vetted contracts.
 
 # ZepplinOS Benefits
 
