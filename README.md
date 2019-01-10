@@ -39,7 +39,7 @@ The need for and idea of ZeppelinOS originated from their audit and then OpenZep
 
 # ZepplinOS Benefits
 
-![SANAUT](zeppelinosupgradeimage.zvg)
+![SANAUT](zeppelinosupgradeimage.svg)
 
 Constant upgrades and patches:
 
