@@ -45,6 +45,4 @@ Package developers propose upgrades to your dependencies, so that your project s
 
 Fix bugs, security vulnerabilities, and introduce new features to your projects without migrating all your data.
 
-Before change in zeppelin os
-
 https://zeppelinos.org
