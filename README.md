@@ -39,9 +39,11 @@ The need for and idea of ZeppelinOS originated from their audit and then OpenZep
 
 # ZepplinOS Benefits
 
+![SANAUT](zeppelinosupgradeimage.zvg)
+
 Constant upgrades and patches:
 
-Package developers propose upgrades to your dependencies, so that your project stays secure and up-to-date.
+Package developers propose upgrades to dependencies, so that projects stays secure and up-to-date.
 
 Fix bugs, security vulnerabilities, and introduce new features to your projects without migrating all your data.
 
