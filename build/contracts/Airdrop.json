@@ -81,7 +81,7 @@
   "deployedBytecode": "0x608060405260043610610062576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff168063025ff12f146100675780635eab74fc146101305780638da5cb5b14610187578063f2fde38b146101de575b600080fd5b34801561007357600080fd5b5061012e600480360381019080803573ffffffffffffffffffffffffffffffffffffffff1690602001909291908035906020019082018035906020019080806020026020016040519081016040528093929190818152602001838360200280828437820191505050505050919291929080359060200190820180359060200190808060200260200160405190810160405280939291908181526020018383602002808284378201915050505050509192919290505050610221565b005b34801561013c57600080fd5b50610145610491565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b34801561019357600080fd5b5061019c6104b7565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b3480156101ea57600080fd5b5061021f600480360381019080803573ffffffffffffffffffffffffffffffffffffffff1690602001909291905050506104dc565b005b60008060009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff1614151561030d576040517f08c379a00000000000000000000000000000000000000000000000000000000081526004018080602001828103825260238152602001807f4f6e6c79206f776e657220697320616c6c6f77656420746f2063616c6c20746881526020017f69732e000000000000000000000000000000000000000000000000000000000081525060400191505060405180910390fd5b600090505b825181101561048b57600160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff166323b872dd85858481518110151561036857fe5b90602001906020020151858581518110151561038057fe5b906020019060200201516040518463ffffffff167c0100000000000000000000000000000000000000000000000000000000028152600401808473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020018373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020018281526020019350505050602060405180830381600087803b15801561044257600080fd5b505af1158015610456573d6000803e3d6000fd5b505050506040513d602081101561046c57600080fd5b8101908080519060200190929190505050508080600101915050610312565b50505050565b600160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1681565b6000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1681565b6000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff161415156105c6576040517f08c379a00000000000000000000000000000000000000000000000000000000081526004018080602001828103825260238152602001807f4f6e6c79206f776e657220697320616c6c6f77656420746f2063616c6c20746881526020017f69732e000000000000000000000000000000000000000000000000000000000081525060400191505060405180910390fd5b600073ffffffffffffffffffffffffffffffffffffffff168173ffffffffffffffffffffffffffffffffffffffff1614151561063d57806000806101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff1602179055505b505600a165627a7a72305820b2cdd67709d39d7eecbaaa970ba92ca55305951eee584213f665ee7f9965031a0029",
   "sourceMap": "59:1000:0:-;;;147:124;8:9:-1;5:2;;;30:1;27;20:12;5:2;147:124:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;207:10;199:5;;:18;;;;;;;;;;;;;;;;;;250:12;228:7;;:35;;;;;;;;;;;;;;;;;;147:124;59:1000;;;;;;",
   "deployedSourceMap": "59:1000:0:-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;567:489;;8:9:-1;5:2;;;30:1;27;20:12;5:2;567:489:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;112:26;;8:9:-1;5:2;;;30:1;27;20:12;5:2;112:26:0;;;;;;;;;;;;;;;;;;;;;;;;;;;85:20;;8:9:-1;5:2;;;30:1;27;20:12;5:2;85:20:0;;;;;;;;;;;;;;;;;;;;;;;;;;;406:153;;8:9:-1;5:2;;;30:1;27;20:12;5:2;406:153:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;567:489;705:6;334:5;;;;;;;;;;;320:19;;:10;:19;;;312:66;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;714:1;705:10;;700:349;722:24;:31;718:1;:35;700:349;;;886:7;;;;;;;;;;;:20;;;907:14;923:24;948:1;923:27;;;;;;;;;;;;;;;;;;952:7;960:1;952:10;;;;;;;;;;;;;;;;;;886:77;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;886:77:0;;;;8:9:-1;5:2;;;45:16;42:1;39;24:38;77:16;74:1;67:27;5:2;886:77:0;;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;886:77:0;;;;;;;;;;;;;;;;;756:3;;;;;;;700:349;;;567:489;;;;:::o;112:26::-;;;;;;;;;;;;;:::o;85:20::-;;;;;;;;;;;;;:::o;406:153::-;334:5;;;;;;;;;;;320:19;;:10;:19;;;312:66;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;505:1;485:22;;:8;:22;;;;481:71;;;532:8;524:5;;:16;;;;;;;;;;;;;;;;;;481:71;406:153;:::o",
-  "source": "pragma solidity ^0.4.24;\r\n\r\nimport \"./Sanauth_New.sol\";\r\n\r\ncontract Airdrop {\r\n\r\n    address public owner;\r\n    Sanauth_New public mytoken;\r\n\r\n    constructor(address tokenAddress) public {\r\n        owner = msg.sender;\r\n        mytoken = Sanauth_New(tokenAddress);\r\n    }\r\n\r\n    modifier onlyOwner()  {\r\n        require(msg.sender == owner,\"Only owner is allowed to call this.\");\r\n        _;\r\n    }\r\n\r\n    function transferOwnership(address newOwner) public onlyOwner {\r\n\r\n        if (newOwner != address(0)) {\r\n            owner = newOwner;\r\n        }\r\n    }\r\n\r\n    function airdrop (address airdropAddress, address[] airDropDesinationAddress, uint[] amounts) \r\n        public onlyOwner{\r\n\r\n        for( uint i = 0 ; i < airDropDesinationAddress.length ; i++ ) {\r\n            //ERC20Interface(contractObj).transferFrom(tokenRepo, airDropDesinationAddress[i], amounts[i]);\r\n            mytoken.transferFrom(airdropAddress, airDropDesinationAddress[i], amounts[i]);\r\n            //mytoken.transfer(airDropDesinationAddress[i], amounts[i]);\r\n        }\r\n    }\r\n}",
+  "source": "pragma solidity ^0.4.24;\r\n\r\nimport \"./Sanaut_New.sol\";\r\n\r\ncontract Airdrop {\r\n\r\n    address public owner;\r\n    Sanauth_New public mytoken;\r\n\r\n    constructor(address tokenAddress) public {\r\n        owner = msg.sender;\r\n        mytoken = Sanauth_New(tokenAddress);\r\n    }\r\n\r\n    modifier onlyOwner()  {\r\n        require(msg.sender == owner,\"Only owner is allowed to call this.\");\r\n        _;\r\n    }\r\n\r\n    function transferOwnership(address newOwner) public onlyOwner {\r\n\r\n        if (newOwner != address(0)) {\r\n            owner = newOwner;\r\n        }\r\n    }\r\n\r\n    function airdrop (address airdropAddress, address[] airDropDesinationAddress, uint[] amounts) \r\n        public onlyOwner{\r\n\r\n        for( uint i = 0 ; i < airDropDesinationAddress.length ; i++ ) {\r\n            //ERC20Interface(contractObj).transferFrom(tokenRepo, airDropDesinationAddress[i], amounts[i]);\r\n            mytoken.transferFrom(airdropAddress, airDropDesinationAddress[i], amounts[i]);\r\n            //mytoken.transfer(airDropDesinationAddress[i], amounts[i]);\r\n        }\r\n    }\r\n}",
   "sourcePath": "C:\\Users\\User\\Videos\\zeppelin\\contracts\\Airdrop.sol",
   "ast": {
     "absolutePath": "/C/Users/User/Videos/zeppelin/contracts/Airdrop.sol",
@@ -105,8 +105,8 @@
         "src": "0:24:0"
       },
       {
-        "absolutePath": "/C/Users/User/Videos/zeppelin/contracts/Sanauth_New.sol",
-        "file": "./Sanauth_New.sol",
+        "absolutePath": "/C/Users/User/Videos/zeppelin/contracts/Sanaut_New.sol",
+        "file": "./Sanaut_New.sol",
         "id": 2,
         "nodeType": "ImportDirective",
         "scope": 95,
@@ -164,19 +164,19 @@
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
-              "typeIdentifier": "t_contract$_Sanauth_New_$1237",
-              "typeString": "contract Sanauth_New"
+              "typeIdentifier": "t_contract$_Sanaut_New_$1237",
+              "typeString": "contract Sanaut_New"
             },
             "typeName": {
               "contractScope": null,
               "id": 5,
-              "name": "Sanauth_New",
+              "name": "Sanaut_New",
               "nodeType": "UserDefinedTypeName",
               "referencedDeclaration": 1237,
               "src": "112:11:0",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_Sanauth_New_$1237",
-                "typeString": "contract Sanauth_New"
+                "typeIdentifier": "t_contract$_Sanaut_New_$1237",
+                "typeString": "contract Sanaut_New"
               }
             },
             "value": null,
@@ -267,8 +267,8 @@
                       "referencedDeclaration": 6,
                       "src": "228:7:0",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_contract$_Sanauth_New_$1237",
-                        "typeString": "contract Sanauth_New"
+                        "typeIdentifier": "t_contract$_Sanaut_New_$1237",
+                        "typeString": "contract Sanaut_New"
                       }
                     },
                     "nodeType": "Assignment",
@@ -298,14 +298,14 @@
                           }
                         ],
                         "id": 17,
-                        "name": "Sanauth_New",
+                        "name": "Sanauh_New",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
                         "referencedDeclaration": 1237,
                         "src": "238:11:0",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_type$_t_contract$_Sanauth_New_$1237_$",
-                          "typeString": "type(contract Sanauth_New)"
+                          "typeIdentifier": "t_type$_t_contract$_Sanaut_New_$1237_$",
+                          "typeString": "type(contract Sanaut_New)"
                         }
                       },
                       "id": 19,
@@ -318,14 +318,14 @@
                       "nodeType": "FunctionCall",
                       "src": "238:25:0",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_contract$_Sanauth_New_$1237",
-                        "typeString": "contract Sanauth_New"
+                        "typeIdentifier": "t_contract$_Sanaut_New_$1237",
+                        "typeString": "contract Sanaut_New"
                       }
                     },
                     "src": "228:35:0",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_contract$_Sanauth_New_$1237",
-                      "typeString": "contract Sanauth_New"
+                      "typeIdentifier": "t_contract$_Sanaut_New_$1237",
+                      "typeString": "contract Sanaut_New"
                     }
                   },
                   "id": 21,
@@ -904,8 +904,8 @@
                               "referencedDeclaration": 6,
                               "src": "886:7:0",
                               "typeDescriptions": {
-                                "typeIdentifier": "t_contract$_Sanauth_New_$1237",
-                                "typeString": "contract Sanauth_New"
+                                "typeIdentifier": "t_contract$_Sanaut_New_$1237",
+                                "typeString": "contract Sanaut_New"
                               }
                             },
                             "id": 80,
@@ -1272,8 +1272,8 @@
         "src": "0:24:0"
       },
       {
-        "absolutePath": "/C/Users/User/Videos/zeppelin/contracts/Sanauth_New.sol",
-        "file": "./Sanauth_New.sol",
+        "absolutePath": "/C/Users/User/Videos/zeppelin/contracts/Sanaut_New.sol",
+        "file": "./Sanaut_New.sol",
         "id": 2,
         "nodeType": "ImportDirective",
         "scope": 95,
@@ -1331,19 +1331,19 @@
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
-              "typeIdentifier": "t_contract$_Sanauth_New_$1237",
-              "typeString": "contract Sanauth_New"
+              "typeIdentifier": "t_contract$_Sanaut_New_$1237",
+              "typeString": "contract Sanaut_New"
             },
             "typeName": {
               "contractScope": null,
               "id": 5,
-              "name": "Sanauth_New",
+              "name": "Sanaut_New",
               "nodeType": "UserDefinedTypeName",
               "referencedDeclaration": 1237,
               "src": "112:11:0",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_Sanauth_New_$1237",
-                "typeString": "contract Sanauth_New"
+                "typeIdentifier": "t_contract$_Sanaut_New_$1237",
+                "typeString": "contract Sanaut_New"
               }
             },
             "value": null,
@@ -1434,8 +1434,8 @@
                       "referencedDeclaration": 6,
                       "src": "228:7:0",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_contract$_Sanauth_New_$1237",
-                        "typeString": "contract Sanauth_New"
+                        "typeIdentifier": "t_contract$_Sanaut_New_$1237",
+                        "typeString": "contract Sanaut_New"
                       }
                     },
                     "nodeType": "Assignment",
@@ -1465,14 +1465,14 @@
                           }
                         ],
                         "id": 17,
-                        "name": "Sanauth_New",
+                        "name": "Sanaut_New",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
                         "referencedDeclaration": 1237,
                         "src": "238:11:0",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_type$_t_contract$_Sanauth_New_$1237_$",
-                          "typeString": "type(contract Sanauth_New)"
+                          "typeIdentifier": "t_type$_t_contract$_Sanaut_New_$1237_$",
+                          "typeString": "type(contract Sanaut_New)"
                         }
                       },
                       "id": 19,
@@ -1485,14 +1485,14 @@
                       "nodeType": "FunctionCall",
                       "src": "238:25:0",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_contract$_Sanauth_New_$1237",
-                        "typeString": "contract Sanauth_New"
+                        "typeIdentifier": "t_contract$_Sanaut_New_$1237",
+                        "typeString": "contract Sanaut_New"
                       }
                     },
                     "src": "228:35:0",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_contract$_Sanauth_New_$1237",
-                      "typeString": "contract Sanauth_New"
+                      "typeIdentifier": "t_contract$_Sanaut_New_$1237",
+                      "typeString": "contract Sanaut_New"
                     }
                   },
                   "id": 21,
@@ -2071,8 +2071,8 @@
                               "referencedDeclaration": 6,
                               "src": "886:7:0",
                               "typeDescriptions": {
-                                "typeIdentifier": "t_contract$_Sanauth_New_$1237",
-                                "typeString": "contract Sanauth_New"
+                                "typeIdentifier": "t_contract$_Sanaut_New_$1237",
+                                "typeString": "contract Sanaut_New"
                               }
                             },
                             "id": 80,
