@@ -4,6 +4,10 @@ Adsana´s ZeppelinOS Upgradable Smart Contract contract was configured to distri
 
 The SANAUT ZeppelinOS smart contract code has been tested and launched on the Ropsten test network, the official Ethereum Etherscan Network. 
 
+This contract can easily be upgraded to stay up with continued package dependency changes.  Package dependencies are the additional packages (applications) required to run a smart contract.  When a package / dependency (application) is updated for the sake of security or improvement without ZeppelinOS in place you would not be able to upgrade your on-chain smart contract and thus be vulnerable to hacking.
+
+This contract can be modified to launch and distribute STO or security tokens as well.
+
 Prior to update in zeppelin os (After adding a functionality)
 
 Transaction hash:-  --> 0x56fdf4db7cfb900e519d493abb09f2a23167a2c1be07b99bd90f7e7efac8a8da
@@ -22,11 +26,6 @@ Transaction hash:-   --> 0x0f52a581fb0e542a4338ab20100bbd4c6fb8c1e5ddc9945540148
 Address:-   0xA0D177488D2e1740FAF8536d56085d1e41b94c7e
 
 Ropsten Link -->  https://ropsten.etherscan.io/tx/0x0f52a581fb0e542a4338ab20100bbd4c6fb8c1e5ddc99455401481d5878265c4
-
-
-This contract can easily be upgraded to stay up with continued package dependency changes.  Package dependencies are the additional packages (applications) required to run a smart contract.  When a package / dependency (application) is updated for the sake of security or improvement without ZeppelinOS in place you would not be able to upgrade your on-chain smart contract and thus be vulnerable to hacking.
-
-This contract can be modified to launch and distribute STO or security tokens as well.
 
 # Open Zeppelin / ZeppelinOS.  The defacto leaders in open and secure smart contract code.
 
